@@ -2,6 +2,8 @@ package com.jpmc;
 
 public class PersonUser {
     public static void main(String[] args) {
+        
+        // Unnecessary creation code
         Person sam = new Person();
         sam.setName("Sam");
 
