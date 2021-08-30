@@ -18,4 +18,4 @@ Server side JavaScript - 50 min
 * Design the Conference and SessionPlanner classes and configure the beans. Configure the topics in a collection in the config file.
 * Create a User class that will create an instance of the Conference object and print the total number of 60 min/50 min/45 min topics.
 
-* You can use the __<util:map>__ with __<entry key="" value="">__ for configuring the topics
+* You can use the __<util:map>__ with __&lt;entry key="" value=""&gt;__ for configuring the topics
