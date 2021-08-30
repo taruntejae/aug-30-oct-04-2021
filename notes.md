@@ -101,12 +101,20 @@ class Account {
 * Start your container
 
 
+### Java beans
 
+* A Java bean refers to a class with private variables, public getter/setters and a no-args constructor
+* Spring framework's only requirement is all classes have to be __Java beans__
 
+### Lifecycle
 
-
-
-
+* ApplicationContext is an active container. It instantiates ALL the beans configured during STARTUP
+* All the beans configured in Spring are __SINGLETON__ by default
+* __scope__ of the bean can be changed to prototype || request || session
+* Managing the lifecycle of the beans
+* __lazy-init__ used to defer the instantiation of the beans
+* 2 types of DI -> Constructor-based and Property-based
+* property-based DI is more often used than constructor-based DI
 
 
 
