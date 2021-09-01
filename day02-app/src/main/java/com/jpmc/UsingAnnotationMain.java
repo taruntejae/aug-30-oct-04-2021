@@ -9,6 +9,7 @@ public class UsingAnnotationMain {
         Car car = context.getBean("car", Car.class);
         System.out.println(car.getModel());
         System.out.println(car.getYearOfMake());
-        System.out.println(car.getEngine());
+        System.out.println(car.getEngine().getPower());
+        System.out.println(car.getOwners());
     }
 }

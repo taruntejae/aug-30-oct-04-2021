@@ -7,5 +7,14 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
+    <context:property-placeholder location="classpath:vehicle.properties"></context:property-placeholder>
     <context:component-scan base-package="com.jpmc"/>
+    <util:list id="carOwners">
+        <value>Sam</value>
+        <value>Ram</value>
+    </util:list>
+    <util:list id="jointOwners">
+        <value>Viru</value>
+        <value>Sameera</value>
+    </util:list>
 </beans>

@@ -1,9 +1,12 @@
 package com.jpmc;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 //<bean id="car" class="com.jpmc.Car"/>
 @Component
@@ -14,6 +17,18 @@ public class Car {
 
     @Value("2020")
     private int yearOfMake;
+
+    @Autowired
+    @Qualifier("jointOwners")
+    private List<String> owners;
+
+    public List<String> getOwners() {
+        return owners;
+    }
+
+    public void setOwners(List<String> owners) {
+        this.owners = owners;
+    }
 
     //<property name="engine" ref="engine"/>
     @Autowired
