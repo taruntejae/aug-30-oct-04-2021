@@ -19,7 +19,11 @@
         <property name="topics" ref="topics"></property>
     </bean>
 
-    <util:map id="topics">
+    <util:map id="topics2"> <!-- Map<Integer, String> -->
+        <entry key="45" value="Scala Tricks"></entry>
+    </util:map>
+
+    <util:map id="topics"> <!--Map<String, List<String>>-->
         <entry key="45" value-ref="45MinTopics"></entry>
         <entry key="50" value-ref="50MinTopics"></entry>
         <entry key="60" value-ref="60MinTopics"></entry>
@@ -29,6 +33,10 @@
         <value>Scala Tricks</value>
         <value>Grails for MVC</value>
     </util:list>
+
+<!-- <bean id="my45MinTopics" class="java.util.ArrayList"></bean>-->
+<!-- <bean id="my45MinTopics" class="java.util.Scanner"></bean> new Scanner(System.in)-->
+<!--    <bean id="ex" class="java.lang.Thread"></bean>-->
 
     <util:list id="50MinTopics">
         <value>Spring unit testing</value>
