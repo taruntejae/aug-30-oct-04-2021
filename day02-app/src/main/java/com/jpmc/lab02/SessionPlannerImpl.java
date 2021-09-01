@@ -1,15 +1,13 @@
 package com.jpmc.lab02;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class SessionPlannerImpl implements SessionPlanner {
     private String topicsFor60Min;
     private String topicsFor50Min;
     private String topicsFor45Min;
 
+    //private Properties anotherListOfTopics;
     private Map<String, String> anotherListOfTopics;
     private Map<Integer, List<String>> topics;
 
