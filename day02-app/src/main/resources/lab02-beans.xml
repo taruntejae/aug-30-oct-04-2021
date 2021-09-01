@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+    <context:property-placeholder location="lab02-topics.properties"/>
+    <util:properties id="topicsList" location="classpath:lab02-topics-another.properties"></util:properties>
+
+    <bean id="sessionPlanner" class="com.jpmc.lab02.SessionPlannerImpl" init-method="init">
+        <property name="topicsFor60Min" value="${60}"></property>
+        <property name="topicsFor50Min" value="${50}"></property>
+        <property name="topicsFor45Min" value="${45}"></property>
+        <property name="anotherListOfTopics" ref="topicsList"></property>
+    </bean>
+
+    <bean id="conference" class="com.jpmc.lab02.Conference">
+        <property name="sessionPlanner" ref="sessionPlanner"/>
+    </bean>
+</beans>
