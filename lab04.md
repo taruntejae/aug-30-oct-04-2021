@@ -22,15 +22,15 @@ INSERT INTO accountsdb.accounts VALUES('acc102', 'Ram', 10000);
 
 ``` java
 public interface AccountDao {
-	void deposit(int accountNumber,int amount);
-	void withdraw(int accountNumber,int amount);
+	void deposit(String accountNumber,int amount);
+	void withdraw(String accountNumber,int amount);
 }
 
 public class AccountDaoImpl implements AccountDao {
-  public void deposit(int accountNumber,int amount) {
+  public void deposit(String accountNumber,int amount) {
 	  //update balance in accounts table
   }
-  public void withdraw(int accountNumber,int amount) {
+  public void withdraw(String accountNumber,int amount) {
 	  //update balance in accounts table
   }
 }
@@ -38,10 +38,10 @@ public class AccountDaoImpl implements AccountDao {
 public class AccountService
 {
 	private AccountDao accountDao;
-	public void deposit(int accountNumber, int amount) {
+	public void deposit(String accountNumber, int amount) {
 		//call AccountDao’s deposit method
 	}
-	public void withdraw(int accountNumber, int amount) {
+	public void withdraw(String accountNumber, int amount) {
 		//call AccountDao’s withdraw method
 	}
 }
