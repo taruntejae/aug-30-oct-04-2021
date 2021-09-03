@@ -23,6 +23,11 @@ public class PersonsDao {
 
     public List<Person> getAllPersons() {
         String query = "select * from persons";
+//        String query = "select balance from accounts where account_number = " + accountNumber;
+//        Integer balance = jdbcTemplate.queryForObject(query, Integer.class);
+//        if(balance == null) {
+//            //accountNumber is not available
+//        }
         return jdbcTemplate.query(query, new PersonRowMapper());
     }
 

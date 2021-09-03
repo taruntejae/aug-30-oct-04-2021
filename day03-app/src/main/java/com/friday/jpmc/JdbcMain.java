@@ -8,6 +8,7 @@ import java.util.List;
 
 public class JdbcMain {
     public static void main(String[] args) {
+        //update accounts set balance = balance + ? where account_number = ? and balance > ?
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
         String[] beanNames = context.getBeanDefinitionNames();
