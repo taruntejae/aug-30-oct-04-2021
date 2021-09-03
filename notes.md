@@ -127,6 +127,27 @@ class Account {
 * Change the scope using __@Scope__
 
 
+### Template classes
+
+* Spring framework provides a lot of __xyzTemplate__ classes
+* These template classes encapsulate all the plumbing work required to work with some functionality
+* Our code needs to just use these template classes
+* JdbcTemplate, JpaTemplate, JmsTemplate, KafkaTemplate, RabbitMQTemplate, RestTemplate, TransactionTemplate
+* Wire the template classes in your code
+
+
+### Jdbc with Spring
+
+* __JdbcTemplate__ is the core
+* Use all the methods in this class for CRUD operations
+* JdbcTemplate is wired with the data source(connection details)
+* This class takes care of all the plumbing work required to talk to a database
+* Handles all the checked exceptions and throws unchecked exceptions
+* You just need to have a catch for _DataAccessException_
+
+
+
+
 
 
 
