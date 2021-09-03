@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+    <context:component-scan base-package="com.jpmc.lab03"/>
+<!--    <context:property-placeholder location="classpath:company.properties"></context:property-placeholder>-->
+
+    <util:set id="employees">
+        <bean class="com.jpmc.lab03.Employee">
+            <property name="name" value="Sam"></property>
+            <property name="id" value="3421"></property>
+            <property name="level" value="2"></property>
+        </bean>
+        <bean class="com.jpmc.lab03.Employee">
+            <property name="name" value="Ram"></property>
+            <property name="id" value="321"></property>
+            <property name="level" value="3"></property>
+        </bean>
+    </util:set>
+</beans>

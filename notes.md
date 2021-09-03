@@ -117,6 +117,14 @@ class Account {
 * property-based DI is more often used than constructor-based DI
 
 
+### Annotations
+
+* Mark the bean as __@Component__
+* XML file needs just one liner __context:component-scan__
+* Autowire using __@Autowired__
+* Can specify the bean you want to autowire by using __@Qualifier__
+* __@Value__ for specifying the values
+* Change the scope using __@Scope__
 
 
 
