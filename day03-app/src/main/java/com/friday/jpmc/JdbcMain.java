@@ -9,12 +9,18 @@ import java.util.List;
 public class JdbcMain {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+        String[] beanNames = context.getBeanDefinitionNames();
+        for (String beanName: beanNames) {
+            System.out.println(beanName);
+        }
+        System.out.println();
+
         PersonsDao personsDao = context.getBean("personsDao", PersonsDao.class);
         List<String> csv = personsDao.getAllPersonsInCSV();
         for (String item: csv) {
             System.out.println(item);
         }
-
 
         try {
             personsDao.updateAge(101, 12);
