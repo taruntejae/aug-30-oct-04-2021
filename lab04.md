@@ -38,10 +38,10 @@ public class AccountDaoImpl implements AccountDao {
 public class AccountService
 {
 	private AccountDao accountDao;
-	public void deposit(int accountNumber,String type, int amount) {
+	public void deposit(int accountNumber, int amount) {
 		//call AccountDao’s deposit method
 	}
-	public void withdraw(int accountNumber,String type, int amount) {
+	public void withdraw(int accountNumber, int amount) {
 		//call AccountDao’s withdraw method
 	}
 }
