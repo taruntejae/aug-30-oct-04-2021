@@ -147,7 +147,21 @@ class Account {
 
 
 
+### artifactID
 
+* Every maven project will have a artifactID and groupID and version number
+* groupId represents say the project -> __com.jpmc.insurance__
+* artifactId represents say the module -> __health__
+* version number is say 1.0.1
+* __groupId:artifactID:version__ is unique
+
+```
+	 <dependency>
+		 <groupId>com.jpmc.insurance</groupId>
+         <artifactId>health</artifactId>
+		 <version>1.0.1</version>
+	 </dependency>	 
+```
 
 
 
