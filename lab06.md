@@ -21,7 +21,7 @@ public class ConferenceService {
 		//true if succesfully inserted
 		//false if insertion fails
 	}
-	public List<Topic> getAllTopics() {
+	public List<Topic> getAllTopics(String title) {
 	
 	} 
 }
