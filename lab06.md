@@ -1,3 +1,5 @@
+* Create or work with an existing Spring boot project. Add jdbc and mysql/oracle driver dependencies
+
 * Create a table __topics__ with the following fields
 * id int(primary key), title(varchar) and duration (number)
 * Implement __TopicDao__ that has the following methods
