@@ -20,12 +20,17 @@ public class Day04BootstrapAppApplication implements CommandLineRunner {
 	@Autowired
 	private  PersonsDao personsDao;
 
+	@Autowired
+	private Person person;
+
 	@Override
 	public void run(String... args) throws Exception {
-		for (String arg: args) {
-			System.out.println(arg);
-		}
-		personsDao.insert(987, "Dhoni", 40);
-		System.out.println("Done");
+		System.out.println(person.getName() + ", " + person.getAge());
+		System.out.println(person.getHobbies());
+//		for (String arg: args) {
+//			System.out.println(arg);
+//		}
+//		personsDao.insert(987, "Dhoni", 40);
+//		System.out.println("Done");
 	}
 }
