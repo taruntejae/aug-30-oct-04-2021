@@ -10,6 +10,7 @@ import java.util.List;
 @Configuration
 public class AppConfiguration {
 
+    //<util:list id="myHobbies">...</util:list>
     @Bean
     public List<String> myHobbies() {
         List<String> hobbies = new ArrayList<>();
