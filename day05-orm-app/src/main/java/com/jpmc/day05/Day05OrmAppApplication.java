@@ -1,5 +1,6 @@
 package com.jpmc.day05;
 
+import com.jpmc.day05.lab07.ConferenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,8 +21,19 @@ public class Day05OrmAppApplication implements CommandLineRunner {
     @Autowired
     private PersonsDao personsDao;
 
+    @Autowired
+    private ConferenceService conferenceService;
+
     @Override
     public void run(String... args) throws Exception {
+        conferenceService.addTopic("Concurrency using Golang", 60);
+        conferenceService.addTopic("Reactive programming", 60);
+
+        System.out.println(conferenceService.getAllTopics());
+
+
+//        System.out.println(personsDao.getClass().getName());
+//        System.out.println(personsDao.getClass().getInterfaces()[0]);
 
         //savePerson();
         //updateAge();
@@ -29,14 +41,14 @@ public class Day05OrmAppApplication implements CommandLineRunner {
 
 
 
-        Iterator<Person> itr = personsDao.findAll().iterator();
-        List<Person> persons = new ArrayList<>();
-        while(itr.hasNext()) {
-            persons.add(itr.next());
-        }
-        System.out.println(persons);
-
-        System.out.println("Done");
+//        Iterator<Person> itr = personsDao.findAll().iterator();
+//        List<Person> persons = new ArrayList<>();
+//        while(itr.hasNext()) {
+//            persons.add(itr.next());
+//        }
+//        System.out.println(persons);
+//
+//        System.out.println("Done");
 
     }
 

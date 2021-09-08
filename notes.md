@@ -184,7 +184,19 @@ class Account {
 * ORM like Hibernate have a very solid caching mechanism
 
 
+#### Proxy class
 
+``` java
+package com.sun.proxy;
+
+class $Proxy65 implements PersonDao {
+	//findById
+	//deleteById
+	//save
+	//delete
+	
+}
+```
 
 
 
