@@ -17,11 +17,11 @@
 ``` java 
 
 public class ConferenceService {
-	public true addTopic(String title, int duration) {
+	public boolean addTopic(String title, int duration) {
 		//true if succesfully inserted
 		//false if insertion fails
 	}
-	public List<Topic> getAllTopics(String title) {
+	public List<Topic> getAllTopics() {
 	
 	} 
 }
