@@ -164,6 +164,60 @@ class Account {
 ```
 
 
+### ORM
+
+* ORM is a concept in CS
+* Persisting objects in Databases
+* ie., take the data out of the objects and store them in database
+* Every object represents a __row__ in a particular table
+
+* .NET uses Entity framework; RoR uses ActiveRecord
+* Java uses libraries like Hibernate, Toplink, JDO to implement ORM
+* Since we have several libraries to implement ORM in the Java world, the then __Sun Microsystems__ developed a standard
+* The standard is called __JPA__
+* Now, if you want to use ORM in Java the library should be __JPA compliant__
+* Using JPA from Java directly makes us write a lot of code; lot of plumbing work;
+* Now, Spring boot makes it easy
+
+#### Some insights into ORM libraries
+* Caching; Data and queries are cached; they are not generated or loaded everytime from the database;
+* ORM like Hibernate have a very solid caching mechanism
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
