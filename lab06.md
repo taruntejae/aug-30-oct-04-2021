@@ -7,7 +7,7 @@
 ``` java
 
 	void addTopic(String title, int duration); //DOES NOT ALLOW DUPLICATION
-	List<Topic> getTopics(String title);
+	List<Topic> getTopics();
 	boolean topicExists(String title); //true if exists, false if not present	
 
 ```
