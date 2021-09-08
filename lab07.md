@@ -1,16 +1,9 @@
-* Create or work with an existing Spring boot project. Add jdbc and mysql/oracle driver dependencies
+* Create or work with an existing Spring boot project. Add JPA and mysql/oracle driver dependencies
 
 * Create a table __topics__ with the following fields
 * id int(primary key), title(varchar) and duration (number)
-* Implement __TopicDao__ that has the following methods
-
-``` java
-
-	void addTopic(String title, int duration); //DOES NOT ALLOW DUPLICATION
-	List<Topic> getTopics();
-	boolean topicExists(String title); //true if exists, false if not present	
-
-```
+* Implement an Entity class __Topic__ and map it with topics table
+* Define __TopicDao__ interface
 
 * Implement a __ConferenceService__ class that uses TopicDao to insert and get the topics
 
