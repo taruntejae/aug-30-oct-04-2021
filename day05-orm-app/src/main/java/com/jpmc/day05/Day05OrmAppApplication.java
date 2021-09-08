@@ -27,6 +27,8 @@ public class Day05OrmAppApplication implements CommandLineRunner {
         //updateAge();
         //personsDao.deleteById(101);
 
+
+
         Iterator<Person> itr = personsDao.findAll().iterator();
         List<Person> persons = new ArrayList<>();
         while(itr.hasNext()) {
