@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "persons")
 public class Person {
+    
     @Id
     private int id;
     @Column
@@ -46,5 +47,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

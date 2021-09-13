@@ -5,6 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class Day06OrmAppApplication implements CommandLineRunner {
 
@@ -17,6 +19,17 @@ public class Day06OrmAppApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        personService.savePersons((int)(Math.random() * 1000), "Sharma", 34);
+        //personService.savePersons((int)(Math.random() * 1000), "Sharma", 34);
+        //Person person = personService.getPersonWithAge(34);
+        Person person = personService.getPersonWithNameAndAge("Ram", 34);
+        if(person != null) {
+            System.out.println(person);
+        }
+//        List<Person> persons = personService.getAllPersons();
+//        System.out.println(persons);
+
+        List<Person> persons = personService.getAllPersonsWithAgeBetween(30, 60);
+        System.out.println(persons);
+
     }
 }
