@@ -14,7 +14,7 @@ public class Person {
     @Column
     private int age;
 
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Car> cars;
 
     public List<Car> getCars() {
