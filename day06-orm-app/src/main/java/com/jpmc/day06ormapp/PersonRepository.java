@@ -35,5 +35,8 @@ public interface PersonRepository extends CrudRepository<Person, Integer> {
     void updateAgeOfPerson(@Param("p2") int id, @Param("p1") int age);
 
     @Query(value = "select distinct name from persons", nativeQuery = true)
-    List<Person> getAllDistinctPersonNames();
+    List<String> getAllDistinctPersonNames();
+
+    @Query(value = "select * from persons", nativeQuery = true)
+    List<Person> getAll();
 }
