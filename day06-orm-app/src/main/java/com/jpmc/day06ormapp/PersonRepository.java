@@ -6,13 +6,15 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PersonRepository extends CrudRepository<Person, Integer> {
     //findBy, findAllBy
 
-
+    @Query(value = "select age from persons where id = :p1", nativeQuery = true)
+    Optional<Integer> findAgeById(@Param("p1") int id);
     Person findByName(String name);
-    Person findByAge(int age);
+    Person findByAge(int age); //select * from persons where age = ?
     Person findByNameAndAge(String name, int age);
     Person findByIdAndNameAndAge(int id, String name, int age);
     Person findByNameOrAge(String name, int age);
