@@ -33,30 +33,20 @@ type varchar
 * Implement these classes using JPA with Spring.
 
 ``` java
-public interface AccountDao {
-	void deposit(String accountNumber, int amount);
-	void withdraw(String accountNumber, int amount);
+public interface AccountRepository {
 }
 
-public class AccountDaoImpl implements AccountDao {
-  public void deposit(String accountNumber, int amount) {
-	  //update balance in accounts table
-	  //INSERT A RECORD IN Statements table with type as 'CREDIT'
-  }
-  public void withdraw(String accountNumber, int amount) {
-	  //update balance in accounts table
-	  //INSERT A RECORD IN Statements table with type as 'DEBIT'
-  }
-}
 
 public class AccountService
 {
-	private AccountDao accountDao;
+	private AccountRepository accountDao;
 	public void deposit(String accountNumber, int amount) {
-		//call AccountDao’s deposit method
+		//update balance in accounts table
+	  	//INSERT A RECORD IN Statements table with type as 'CREDIT'
 	}
 	public void withdraw(String accountNumber, int amount) {
-		//call AccountDao’s withdraw method
+		  //update balance in accounts table
+		  //INSERT A RECORD IN Statements table with type as 'DEBIT'
 	}
 }
 ```
