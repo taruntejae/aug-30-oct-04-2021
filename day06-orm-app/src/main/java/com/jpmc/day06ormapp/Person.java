@@ -1,20 +1,29 @@
 package com.jpmc.day06ormapp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "persons")
 public class Person {
-    
+
     @Id
     private int id;
     @Column
     private String name;
     @Column
     private int age;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Car> cars;
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 
     public Person(int id, String name, int age) {
         this.id = id;
