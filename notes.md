@@ -1,3 +1,7 @@
+#ToDo
+* Composite key in ORM
+* Proxy (Lazy loading) in ORM
+
 ### JSE 
 * Install jdk
 * Core java classes 
@@ -199,21 +203,49 @@ class $Proxy65 implements PersonDao {
 ```
 
 
+### Web world
 
+* Frontend (FE) and Backend(BE)
+* Frontend development - HTML, CSS, JavaScript(React, Angular, jQuery, Vue)
+* Backend development - Python, Java, PHP, ASP.DotNET, JavaScript
 
+* Frontend code -> Code that is executed by the browser environment
+* Backend code -> Code that is executed by the server environment (Java)
 
+* __ALL THE CODE resides in the server__
+* The frontend is sent to the browser and executed by the browser
+* The backend is executed by the server and the output is sent to the browser
 
+* Fullstack = FE + BE
 
+#### Backend code in Java
 
+* Code written in Java resides in the server
+* It's executed by the Tomcat container;
+* That piece of code is called __Servlet__
+* BE or web development in Java involves writing __Servlet code__
+* Writing servlet code involves some amount of __plumbing__ :)
+* Spring Boot makes writing backend code or servlet code also very easy
 
+```
+[project-name]
+	pom.xml
+	[src]
+		[main]
+			[java]
+			[webapp]	
+			[resources]	
+	[test]	
+		[java]
+		[resources]
+```
 
+* __webapp__ folder contains html, js, css, images, jsp files 
+* __java__ folder contains all the Java code including __Servlets__
 
+* Web applications are packaged as __.war__ files
 
-
-
-
-
-
+* Servlets are usually singleton. The same instance of the servlet handles the requests for all clients
 
 
 
