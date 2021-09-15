@@ -17,4 +17,11 @@ public class HelloServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("Hello! Time is " + now.toLocalTime());
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        LocalDateTime now = LocalDateTime.now();
+        PrintWriter out = resp.getWriter();
+        out.println("Hello! It's " + now.toLocalTime());
+    }
 }
