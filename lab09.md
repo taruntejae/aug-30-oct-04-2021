@@ -8,7 +8,7 @@
 Total request count: 1
 ```	
 
-* When you access this URL, for 100 times, the output will be
+* When you access this URL, say 100 times, the output will be
 
 ```
 Total request count: 100
