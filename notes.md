@@ -248,10 +248,24 @@ class $Proxy65 implements PersonDao {
 * Servlets are usually singleton. The same instance of the servlet handles the requests for all clients
 
 
+#### Java / JavaScript
+
+* Java is a programming language
+* JavaScript is a programing language
+
+<br/>
+
+* Java gets executed in the backend. ie., a machine with JDK installed which executes Java code
+
+* Javascript can be executed in the backend as well as in the Frontend. ie., Similar to JDK you need a JavaScript runtime installed to execute javascript code
+* What is that JavaScript runtime? __NodeJS__ 
+* Every browser has a JS runtime installed. So JavaScript can be executed in the browser or in the backend also
+
+* What is ReactJS or Angular?; It is a framework or collection of libraries to build Frontend javascript applications 
+* What is Spring boot?: It is a framework or a collection of libraries to build Java applications 
 
 
-
-
+* __Docker__
 
 
 
