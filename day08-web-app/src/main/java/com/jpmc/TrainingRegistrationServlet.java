@@ -13,9 +13,12 @@ import java.io.PrintWriter;
 public class TrainingRegistrationServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("firstname");
-        String message = String.format("Hey %s, Thanks for your interest in the training", name);
+
         HttpSession session = req.getSession(true);
+        String sessionId = session.getId();
+        String name = req.getParameter("firstname");
+        String message = String.format("Hey %s, Thanks for your interest in the training. (%s)", name, sessionId);
+
         session.setAttribute("msg", message);
         resp.sendRedirect("/day08-web-app/output.jsp");
 
