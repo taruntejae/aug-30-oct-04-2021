@@ -1,9 +1,14 @@
 package com.jpmc.day09web;
 
+import com.jpmc.day09web.lab11.Calculator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class Monday {
+
+    @Autowired
+    private Calculator calculator;
 
     @GetMapping("/hello")
     public String greet() {

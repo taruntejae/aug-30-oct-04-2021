@@ -278,9 +278,13 @@ class $Proxy65 implements PersonDao {
 * You don't have to worry about creating servlets, getting the parameters, writing responses; Packaging the application, deploying it in tomcat etc.
 
 
+#### Service
 
-
-
+* Spring boot is used to build services
+* A __service__ is a independently running, self-sufficient application on the __web__. It can be accessed using simple mechanisms like HTTP and exchange data in formats like JSON.  
+* You don't really need to have a web server or application server to run them. They can run on their own
+* They can be scaled up and down. ie., Scalability is the ability to handle more requests. 
+* Services can be scaled up by launching more instances of them to handle the increase in requests
 
 
 

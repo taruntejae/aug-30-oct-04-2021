@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/calc")
 public class CalculatorController {
     @Autowired
-    private Calculator calculator;
+    private Calculator calculator;// = new Calculator();
 
     @GetMapping("/add/{a}/{b}")
     public int add(@PathVariable("a") int a, @PathVariable("b") int b) {
