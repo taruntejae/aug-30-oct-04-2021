@@ -269,6 +269,13 @@ class $Proxy65 implements PersonDao {
 
 
 
+### Spring Boot Web
+
+* Create a spring boot application and add "Web" dependency
+* This automatically creates an embedded tomcat
+* Creates a DispatcherServlet which acts as the main controller. It receives requests from the users and dispatches the request to appropriate controller classes
+* As a developer, our job is to just create __RestController__ classes with url mappings _GetMapping, PostMapping, DeleteMapping, PutMapping_ etc
+* You don't have to worry about creating servlets, getting the parameters, writing responses; Packaging the application, deploying it in tomcat etc.
 
 
 
