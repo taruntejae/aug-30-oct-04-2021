@@ -287,6 +287,10 @@ class $Proxy65 implements PersonDao {
 * Services can be scaled up by launching more instances of them to handle the increase in requests
 
 
+* XML-based services or RESTful services
+* REST is a style with few semantics that you follow to design your services
+* HTTP and JSON data and HTTP verbs as url mapping
+* HTTP verbs; get, post, put, delete, patch
 
 
 
