@@ -293,7 +293,18 @@ class $Proxy65 implements PersonDao {
 * HTTP verbs; get, post, put, delete, patch
 
 
+### Exception handling in services
 
+* A custom exception is a class that extends __Exception__ or __RuntimeException__
+* JVM doesn't care!!! It treats both the same.
+* It's the compiler that discriminate. 
+* If you throw __Exception__ compiler will force you to have try-catch or throws keyword. __RECOMMENDED and WIDELY USED IN PROJECTS__
+* If you throw __RuntimeException__ compiler will just keep quiet. __FOR LAZY PROGRAMMERS LIKE PRABHU__
+
+* In Spring boot you want to generate meaningful information when an error occurs and send it to the user. A mere __try-catch__ block will just handle the exception, but will not be enough to send meaningful responses to the user
+
+* Create a method with the annotation __@ExceptionHandler(<ExceptionType>.class)__
+* This method will automatically be called when the particular type exception is thrown in the application
 
 
 

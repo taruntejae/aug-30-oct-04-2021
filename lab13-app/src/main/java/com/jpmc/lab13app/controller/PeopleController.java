@@ -49,6 +49,12 @@ public class PeopleController {
     }
 
 //    @ExceptionHandler(PersonNotFoundException.class)
+//    public String handlePersonNotFoundException(PersonNotFoundException ex, WebRequest webRequest) {
+//        String errorMessage = "Person with id " + ex.getMessage() + " is not found";
+//        return errorMessage;
+//    }
+
+//    @ExceptionHandler(PersonNotFoundException.class)
 //    public ResponseEntity<String> handlePersonNotFoundException(PersonNotFoundException ex, WebRequest webRequest) {
 //        String errorMessage = "Person with id " + ex.getMessage() + " is not found";
 //        return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
