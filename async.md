@@ -58,6 +58,7 @@ spring.activemq.broker-url=tcp://localhost:61616
 * Finally in the method in **StockController** add the following code to publish the stock symbol to StockQueue
 
 ``` java
+
 @GetMapping("/stock/{symbol}")
 public String getPrice(@PathVariable String symbol) {
 	jmsTemplate.convertAndSend("StockQueue", symbol);
