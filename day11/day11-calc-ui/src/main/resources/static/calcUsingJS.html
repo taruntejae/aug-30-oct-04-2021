@@ -1,0 +1,55 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#addbtn").on("click", () => {
+                let num1 = $("#number1").val();
+                let num2 = $("#number2").val();
+                $.ajax({
+                    url: `/add?number1=${num1}&number2=${num2}`,
+                    method: 'post',
+                    success(response) {
+                        $("#result").text(response);
+                    }
+                });
+            });
+            $("#subtractbtn").on("click", () => {
+                let num1 = $("#number1").val();
+                let num2 = $("#number2").val();
+                $.ajax({
+                    url: `/subtract?number1=${num1}&number2=${num2}`,
+                    method: 'post',
+                    success(response) {
+                        $("#result").text(response);
+                    }
+                });
+            });
+            $("#testbtn").on("click", () => {
+                let num1 = $("#number1").val();
+                let num2 = $("#number2").val();
+                $.ajax({
+                    url: `http://localhost:8081/calc/add?number1=${num1}&number2=${num2}`,
+                    method: 'get',
+                    success(response) {
+                        $("#result").text(response);
+                    },
+                    error(xhr) {
+                        console.log(xhr);
+                        $("#result").text(`Error`);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>My calculator</h1>
+    Number 1 <input type="number" name="number1" id="number1"> <br/>
+    Number 2 <input type="number" name="number2" id="number2"> <br/>
+    <button id="addbtn">Add</button>
+    <button id="subtractbtn">Subtract</button>
+    <button id="testbtn">Call 8081 directly</button>
+    <h1 id="result"></h1>
+</body>
+</html>
