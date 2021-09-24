@@ -30,7 +30,8 @@
 * The method accepts a stock symbol like GOOG, APPL, or INTEL as argument
 * Have a default response as **You'll receive the stock value soon**
 
-```
+``` java
+
 @GetMapping("/stock/{symbol}")
 public String getPrice(@PathVariable String symbol) {
 	return "You'll receive the stock value soon";
@@ -38,7 +39,9 @@ public String getPrice(@PathVariable String symbol) {
 ```
 
 * Autowire a **JmsTemplate** in **StockController**
-```
+
+``` java
+
 @Autowired
 private JmsTemplate jmsTemplate;
 
