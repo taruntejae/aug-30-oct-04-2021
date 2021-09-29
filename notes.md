@@ -1,6 +1,8 @@
 #ToDo
 * Composite key in ORM
 * Proxy (Lazy loading) in ORM
+* Multiple datasources
+* Access one property from another
 
 ### JSE 
 * Install jdk
@@ -306,6 +308,16 @@ class $Proxy65 implements PersonDao {
 * Create a method with the annotation __@ExceptionHandler(<ExceptionType>.class)__
 * This method will automatically be called when the particular type exception is thrown in the application
 
+
+### Transaction management
+
+* Programatically(Bean-managed) and Declaratively(Container-managed)
+* __Programatic txn management__: You write code and specify where to start/end and when to commit/rollback?
+* __TransactionTemplate__ that you use to programmatically manage txns
+
+* __Declarative txn management__: You just declare in your code using annotations and leave the job to the container to manage txns
+* Very very less code
+* Programmatic or Declarative: Spring uses a __TransactionManager__ to provide txn
 
 
 
