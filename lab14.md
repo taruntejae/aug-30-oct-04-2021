@@ -28,7 +28,7 @@ type varchar
 
 #### account-service-app
 
-* Create a __account-service_app__ that runs on 8081 which has the endpoints
+* Create a __account-service-app__ that runs on 8081 which has the endpoints
 
 ```
 @POST -> /account/deposit  (pass the account number, and amount as request params or body)
@@ -41,7 +41,7 @@ type varchar
 
 #### statement-service-app
 
-* Create a __statement-service_app__ that runs on 8082 which has one endpoint to insert into statements table
+* Create a __statement-service-app__ that runs on 8082 which has one endpoint to insert into statements table
 
 ```
 @POST -> /statement (pass the account number, amount and type as request params or body)
@@ -51,7 +51,7 @@ type varchar
 
 
 #### bank-ui-app
-* Create a __bank-ui_app__ that runs on 8080 which has the endpoints
+* Create a __bank-ui-app__ that runs on 8080 which has the endpoints
 
 ```
 @POST -> /bank/deposit  (pass the account number, and amount as request params or body)
