@@ -18,7 +18,10 @@ public class Day13TxnAppApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        shoppingService.placeOrder("printer", 10, "Adyar, Chennai asifjgasdifgsdalfg asdlijfgaklsjdgfkalsjgf klsajdgf klsajgf lksajgflksajgfkalsjfgsdklafjgaskldjfg askljfg ksaljfgsla");
-        System.out.println("Order for printer placed successfully");
+        System.out.println(shoppingService.getClass().getName());
+        System.out.println(shoppingService.getClass().getSuperclass().getName());
+
+        //shoppingService.placeOrder("printer", 10, "Adyar, Chennai asifjgasdifgsdalfg asdlijfgaklsjdgfkalsjgf klsajdgf klsajgf lksajgflksajgfkalsjfgsdklafjgaskldjfg askljfg ksaljfgsla");
+        //System.out.println("Order for printer placed successfully");
     }
 }
