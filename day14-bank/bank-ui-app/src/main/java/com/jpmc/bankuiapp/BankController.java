@@ -25,6 +25,19 @@ public class BankController {
         return "index";
     }
 
+    @Autowired
+    private RemoteService remoteService;
+
+    @PostMapping("/depositlater")
+    @ResponseBody
+    public String depositLater(@RequestParam("accountnumber") String accountNumber,
+                          @RequestParam int amount) {
+        System.out.println("Controller thread -- " + Thread.currentThread().getName());
+        remoteService.deposit(accountNumber, amount);
+        return "Deposit scheduled";
+    }
+
+
     @PostMapping("/deposit")
     public String deposit(@RequestParam("accountnumber") String accountNumber,
                           @RequestParam int amount, HttpSession session) {

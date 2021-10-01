@@ -12,8 +12,8 @@ server:
 account:
   service:
     base:
-      url: http://localhost:7000/api/v1
-
+      #url: http://localhost:7000/api/v1
+      url: http://localhost:8081/account
 
 #actuator configuration settings
 management:
@@ -30,5 +30,6 @@ management:
       enabled: true
 eureka:
   client:
+    enabled: false
     service-url:
       defaultZone: http://localhost:8761/eureka

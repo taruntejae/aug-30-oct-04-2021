@@ -23,7 +23,8 @@ public class GatewayServiceApplication {
                         route -> route
                                     .path("/api/v1/deposit/**")
                                     .filters(f -> f.stripPrefix(3).prefixPath("/account/deposit"))
-                                    .uri("lb://account-service"))
+                                    //.uri("lb://account-service"))
+                                    .uri("http://localhost:8081"))
                 .route("bankwithdraw-v1",
                         route -> route
                                 .path("/api/v1/withdraw/**")

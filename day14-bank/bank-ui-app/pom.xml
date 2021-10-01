@@ -45,6 +45,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.jpmc</groupId>-->
+<!--            <artifactId>jpmc-friday-lib</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
 
     </dependencies>
     <dependencyManagement>
