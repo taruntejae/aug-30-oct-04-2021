@@ -7,3 +7,17 @@ spring:
       suffix: .jsp
 server:
   port: 8080
+
+#actuator configuration settings
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    beans:
+      enabled: true
+    shutdown:
+      enabled: true

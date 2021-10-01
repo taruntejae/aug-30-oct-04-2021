@@ -328,6 +328,7 @@ class $Proxy65 implements PersonDao {
 
 ### day14-bank
 
+* Configure spring boot actuator
 * __bank-ui-app__ on port 8080
 
 
