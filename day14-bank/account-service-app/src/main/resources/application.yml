@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: account-service
+  datasource:
+    url: jdbc:mysql://localhost/accountsdb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+server:
+  port: 8081
