@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: bank-ui
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+server:
+  port: 8080

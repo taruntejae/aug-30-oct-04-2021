@@ -320,8 +320,15 @@ class $Proxy65 implements PersonDao {
 * Programmatic or Declarative: Spring uses a __TransactionManager__ to provide txn
 
 
+### RestController vs Controller
 
+* RestController returns data
+* Controller returns view information. The view has to be resolved to a physical file
+* Controllers are used to build the traditional web application that involves JSPs
 
+### day14-bank
+
+* __bank-ui-app__ on port 8080
 
 
 
