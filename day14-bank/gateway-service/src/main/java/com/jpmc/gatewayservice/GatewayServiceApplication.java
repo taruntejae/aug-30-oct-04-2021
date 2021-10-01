@@ -19,15 +19,15 @@ public class GatewayServiceApplication {
     public RouteLocator configureRoutes(RouteLocatorBuilder builder) {
         return builder
                 .routes()
-                .route("bankdeposit",
+                .route("bankdeposit-v1",
                         route -> route
-                                    .path("/deposit/**")
-                                    .filters(f -> f.stripPrefix(1).prefixPath("/bank/deposit"))
+                                    .path("/api/v1/deposit/**")
+                                    .filters(f -> f.stripPrefix(3).prefixPath("/account/deposit"))
                                     .uri("lb://account-service"))
-                .route("bankwithdraw",
+                .route("bankwithdraw-v1",
                         route -> route
-                                .path("/withdraw/**")
-                                .filters(f -> f.stripPrefix(1).prefixPath("/bank/withdraw"))
+                                .path("/api/v1/withdraw/**")
+                                .filters(f -> f.stripPrefix(3).prefixPath("/account/withdraw"))
                                 .uri("lb://account-service"))
                 .build();
     }
