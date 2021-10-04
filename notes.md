@@ -334,8 +334,19 @@ class $Proxy65 implements PersonDao {
 
 
 
+### Container
 
+* Dockerfile
+* Configure your application to run inside Docker
+* Start your docker
 
+### Webflux
+
+* Default model of web is __PULL__ model
+* Client sends and request to the server and pulls the data
+
+* How about reverse?
+* Client sends a request. And Server keeps pushing data to the client periodically?
 
 
 
